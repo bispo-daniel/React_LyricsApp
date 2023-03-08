@@ -1,0 +1,39 @@
+header {
+    height: 80px;
+    width: 80%;
+    max-width: 1440px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px dotted #1db954;
+
+    margin-bottom: 25px;
+}
+
+header img {
+    width: 110px;
+}
+header img:hover {
+    filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
+    transition: 0.5s;
+}
+
+
+header .socialWrap img {
+    width: 37px;
+    margin-left: 20px;
+}
+
+header .socialWrap img:hover {
+    filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px){
+    header {
+        width: 100%;
+        padding: 0px 10% 0px 5%;
+    }
+}

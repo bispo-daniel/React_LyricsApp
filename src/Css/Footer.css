@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    border-top: 1px dotted #1db954;
+    color: antiquewhite;
+}
+
+footer h1 {
+    padding: 1rem;
+    font-family: 'Tilt Prism';
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+}
