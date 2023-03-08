@@ -11,7 +11,7 @@ class Body extends Component {
             let artist = document.getElementsByClassName('form-control')[1].value
 
             //Chave privada e URL da API
-            let key = '60542a8de897579363a49545e30213ef'
+            let key = 'CHANGE_WITH_YOURS'
             let url = `http://api.musixmatch.com/ws/1.1/matcher.lyrics.get?apikey=${key}&q_track=${song}&q_artist=${artist}`
 
             //Pegando a div do html que recerá os valores em outra div
