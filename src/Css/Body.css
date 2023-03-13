@@ -13,8 +13,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center !important;
+    color: white;
 }
-main h1:hover {
+main > h1:hover, main > p:hover {
     filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
     transition: 0.5s;
 }
@@ -33,7 +34,6 @@ main #insertInto h1 {
     font-size: 15px;
     font-weight: 100;
     color: white;
-    padding-left: 30px;
 }
 
 @media screen and (max-width: 768px){
