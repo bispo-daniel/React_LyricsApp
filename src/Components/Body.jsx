@@ -4,7 +4,7 @@ import '../Css/Body.css'
 class Body extends Component {
     render(){
         let iterator = 0
-        
+
         let it = 0
 
         const apiHandler = () => {
@@ -35,19 +35,18 @@ class Body extends Component {
                 fetch(url)
                     .then(data => data.json())
                     .then(res => {
-                        console.log(res);
                         //Do JSON, buscando somente a letra da música
-                        // let path = res['message']['body']['lyrics']['lyrics_body']
+                        let path = res['message']['body']['lyrics']['lyrics_body']
 
                         //Este é o array de cada palavra na letra da música
-                        // let wordArr = Array(path.split("\n"))[0]
+                        let wordArr = Array(path.split("\n"))[0]
                         
                         //Criar um H1 para cada index do array acima
-                        // for(let phrase in wordArr){
-                        //     let h1 = document.createElement('h1')
-                        //     h1.innerHTML = `${wordArr[phrase]}`
-                        //     queryDiv.appendChild(h1)
-                        // }
+                        for(let phrase in wordArr){
+                            let h1 = document.createElement('h1')
+                            h1.innerHTML = `${wordArr[phrase]}`
+                            queryDiv.appendChild(h1)
+                        }
                     })  
             
         }
