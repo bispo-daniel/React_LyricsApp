@@ -14,3 +14,12 @@ body {
   
   min-height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 5px;
+}

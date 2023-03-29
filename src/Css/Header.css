@@ -7,26 +7,32 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px dotted #1db954;
-
-    margin-bottom: 25px;
+    border: 1px dotted #1db954;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
 }
 
-header img {
+@keyframes roda-roda {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+header > .reactLogo {
     width: 110px;
+    animation: roda-roda 2s linear infinite;
 }
-header img:hover {
+header .reactLogo:hover {
     filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
     transition: 0.5s;
 }
 
 
-header .socialWrap img {
+header > .socialWrap > a > img {
     width: 37px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
-header .socialWrap img:hover {
+header > .socialWrap > a > img:hover {
     filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
     transition: 0.5s;
 }
@@ -34,6 +40,14 @@ header .socialWrap img:hover {
 @media screen and (max-width: 768px){
     header {
         width: 100%;
-        padding: 0px 10% 0px 5%;
+        border: none;
+        border-bottom: 1px dotted #1db954;
+        border-radius: 0;
+    }
+    header .reactLogo {
+        width: 90px;
+    }
+    header > .socialWrap > a > img {
+        width: 30px;
     }
 }

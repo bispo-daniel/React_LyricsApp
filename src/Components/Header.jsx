@@ -8,11 +8,11 @@ class Header extends Component {
     render(){
         return(
             <header>
-                <img src={reactLogo} alt="" />
+                <img src={reactLogo} alt="" className="reactLogo" />
 
                 <div className="socialWrap">
-                    <img src={linkedinLogo} alt="" />
-                    <img src={githubLogo} alt="" />
+                    <a href="https://linkedin.com/in/bispo-daniel" target={"_blank"}  rel="noreferrer"><img src={linkedinLogo} alt="" /></a>
+                    <a href="https://github.com/bispo-daniel" target={"_blank"}  rel="noreferrer"><img src={githubLogo} alt="" /></a>
                 </div>
             </header>
         )

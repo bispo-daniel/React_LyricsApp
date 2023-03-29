@@ -1,12 +1,10 @@
 main {
     width: 50%;
     max-width: 1024px;
-    min-height: 400px;
+    min-height: 80vh;
 
     border-left: 1px dotted #1db954;
     border-right: 1px dotted #1db954;
-
-    margin-bottom: 25px;
 
     word-break: break-all;
 
@@ -14,6 +12,9 @@ main {
     flex-direction: column;
     align-items: center !important;
     color: white;
+}
+main > h1 {
+    padding: 12px;
 }
 main > h1:hover, main > p:hover {
     filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
@@ -24,12 +25,17 @@ main .input-group {
     padding-bottom: 30px;
     justify-content: center 
 }
-
-main .input-group .btn:hover {
-    background-color: #1db954;
-    transition: 0.5s !important;
+main > .input-group > .input-group-append > .form-control {
+    color: white;
+}
+main > .btn {
+    max-width: 300px !important;
+    width: 100%;
 }
 
+#insertInto {
+text-align: center;
+}
 main #insertInto h1 {
     font-size: 15px;
     font-weight: 100;
@@ -39,5 +45,31 @@ main #insertInto h1 {
 @media screen and (max-width: 768px){
     main {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    main > h1, main > p {
+        padding: 12px;
+    }
+    main > .input-group {
+        flex-direction: column;
+        align-items: center !important;
+    }
+    main > .input-group > .input-group-append {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main > .input-group > .input-group-append > .form-control {
+        width: 75% !important;
+        margin-bottom: 5px;
+
+    }
+    main > .input-group > .btn {
+        border-radius: 5px !important;
+        margin-top: 15px;
+        width: 60% !important;
     }
 }

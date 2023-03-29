@@ -1,5 +1,5 @@
 # Check this project online:
-  https://bispo-daniel-lyricsapp.netlify.app
+  https://bishop-lyricsapp.netlify.app
 
 # Getting Started with Create React App
 

@@ -71,17 +71,17 @@ class Body extends Component {
 
         return(
             <main onKeyUp={(e) => enterDown(e)}>
-                <h1>Only 30% ;)</h1>
+                <h1>Lyrics App</h1>
                 <p>Download 'Allow CORS' browser extension...</p>
                 <div className="input-group">
                     <div className="input-group-append">
-                        <input type="text" id="songInput" className="form-control" placeholder="Song" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                        <input type="text" id="ArtistInput" className="form-control" placeholder="Artist" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <input type="text" id="songInput" className="form-control bg-transparent" placeholder="Song" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <input type="text" id="ArtistInput" className="form-control bg-transparent" placeholder="Artist" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                     </div>
-                    <button onClick={() => apiHandler()}className="btn btn-outline-secondary" type="button">Search</button>
+                    <button onClick={() => apiHandler()}className="btn btn-outline-success" type="button">Search</button>
                 </div>
 
-                <button onClick={() => clearResults()}className="btn btn-danger w-50 mb-5" type="button">Clear</button>
+                <button onClick={() => clearResults()}className="btn btn-danger w-75 mb-5" type="button">Clear</button>
 
                 <div id="insertInto"></div>
             </main>

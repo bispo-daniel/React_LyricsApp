@@ -1,7 +1,12 @@
 footer {
     text-align: center;
-    border-top: 1px dotted #1db954;
+    border: 1px dotted #1db954;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
     color: antiquewhite;
+
+    width: 60%;
+    max-width: 1220px;
 }
 
 footer h1 {
@@ -10,4 +15,13 @@ footer h1 {
     font-size: 25px;
     font-weight: 100;
     color: white;
+    margin: 0;
+}
+@media screen and (max-width: 768px){
+    footer {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-top: 1px dotted #1db954;
+    }
 }
