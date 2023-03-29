@@ -4,6 +4,7 @@ import '../Css/Body.css'
 class Body extends Component {
     render(){
         let iterator = 0
+        
         let it = 0
 
         const apiHandler = () => {
