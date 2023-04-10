@@ -14,7 +14,6 @@ class Body extends Component {
             let artist = document.getElementsByClassName('form-control')[1].value
 
             let songAndArtist = `${song} - ${artist}`
-
             Trigger(songAndArtist)
 
             //Chave privada e URL da API    
