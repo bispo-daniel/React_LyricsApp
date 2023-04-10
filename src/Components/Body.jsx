@@ -1,5 +1,6 @@
 import { Component } from "react";
 import '../Css/Body.css'
+import Trigger from '../Trigger'
 
 class Body extends Component {
     render(){
@@ -8,9 +9,13 @@ class Body extends Component {
         let it = 0
 
         const apiHandler = () => {
-            //Pegando o valor dos inputs
+            //Pegando os valores dos inputs
             let song = document.getElementsByClassName('form-control')[0].value
             let artist = document.getElementsByClassName('form-control')[1].value
+
+            let songAndArtist = `${song} - ${artist}`
+
+            Trigger(songAndArtist)
 
             //Chave privada e URL da API    
             //GET YOUR KEY HERE: https://developer.musixmatch.com/admin/applications
