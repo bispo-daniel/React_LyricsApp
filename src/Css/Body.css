@@ -1,10 +1,10 @@
 main {
-    width: 50%;
-    max-width: 1024px;
+    width: 80%;
+    max-width: 700px;
     min-height: 80vh;
 
-    border-left: 1px dotted #1db954;
-    border-right: 1px dotted #1db954;
+    border-left: 1px solid #711b8c;
+    border-right: 1px solid #711b8c;
 
     word-break: break-all;
 
@@ -16,8 +16,8 @@ main {
 main > h1 {
     padding: 12px;
 }
-main > h1:hover, main > p:hover {
-    filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
+main > h1:hover, main > p:hover, #insertInto > div > p:hover, #insertInto > div > h1:hover {
+    color: #711b8c;
     transition: 0.5s;
 }
 main .input-group {
@@ -28,33 +28,53 @@ main .input-group {
 main > .input-group > .input-group-append > .form-control {
     color: white;
 }
+main > .input-group > .input-group-append > #songInput {
+    border-bottom: none !important;
+}
+main > .input-group > .input-group-append > .form-control:focus {
+    border-color: #711b8c !important;
+    box-shadow: 0px 0px 8px #711b8c !important;
+}
 main > .btn {
     max-width: 300px !important;
     width: 100%;
 }
 
-#insertInto {
+main > #insertInto {
 text-align: center;
 }
-main #insertInto h1 {
+
+main > #insertInto > div > h1 {
+    font-weight: 100 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+main > #insertInto > div > p {
     font-size: 15px;
     font-weight: 100;
     color: white;
+    margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 768px){
-    main {
-        width: 80%;
+@media screen and (min-width: 425px) {
+    main > .input-group > .input-group-append > #songInput {
+        border-radius: 5px 0 0 0 !important;
+    }
+    main > .input-group > .input-group-append > #artistInput {
+        border-radius: 0 0 0 5px !important;
     }
 }
 
 @media screen and (max-width: 425px){
     main > h1, main > p {
-        padding: 12px;
+        padding: 10px;
     }
     main > .input-group {
         flex-direction: column;
         align-items: center !important;
+        padding-top: 10px;
     }
     main > .input-group > .input-group-append {
         width: 100%;
@@ -62,11 +82,17 @@ main #insertInto h1 {
         flex-direction: column;
         align-items: center;
     }
+    
     main > .input-group > .input-group-append > .form-control {
         width: 75% !important;
-        margin-bottom: 5px;
-
     }
+    main > .input-group > .input-group-append > #songInput {
+        border-radius: 5px 5px 0 0 !important;
+    }
+    main > .input-group > .input-group-append > #artistInput {
+        border-radius: 0 0 5px 5px  !important;
+    }
+
     main > .input-group > .btn {
         border-radius: 5px !important;
         margin-top: 15px;

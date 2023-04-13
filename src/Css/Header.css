@@ -1,13 +1,13 @@
 header {
     height: 80px;
-    width: 80%;
-    max-width: 1440px;
+    width: 90%;
+    max-width: 1024px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    border: 1px dotted #1db954;
+    border: 1px solid #711b8c;
     border-top: none;
     border-radius: 0 0 5px 5px;
 }
@@ -22,10 +22,9 @@ header > .reactLogo {
     animation: roda-roda 2s linear infinite;
 }
 header .reactLogo:hover {
-    filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
+    filter: invert(14%) sepia(41%) saturate(7456%) hue-rotate(280deg) brightness(83%) contrast(92%);
     transition: 0.5s;
 }
-
 
 header > .socialWrap > a > img {
     width: 37px;
@@ -33,7 +32,7 @@ header > .socialWrap > a > img {
 }
 
 header > .socialWrap > a > img:hover {
-    filter: invert(70%) sepia(43%) saturate(6861%) hue-rotate(102deg) brightness(99%) contrast(77%);
+    filter: invert(14%) sepia(41%) saturate(7456%) hue-rotate(280deg) brightness(83%) contrast(92%);
     transition: 0.5s;
 }
 
@@ -41,7 +40,7 @@ header > .socialWrap > a > img:hover {
     header {
         width: 100%;
         border: none;
-        border-bottom: 1px dotted #1db954;
+        border-bottom: 1px solid #711b8c;
         border-radius: 0;
     }
     header .reactLogo {

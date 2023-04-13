@@ -1,12 +1,12 @@
 footer {
     text-align: center;
-    border: 1px dotted #1db954;
+    border: 1px solid #711b8c;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
     color: antiquewhite;
 
-    width: 60%;
-    max-width: 1220px;
+    width: 90%;
+    max-width: 1024px;
 }
 
 footer h1 {
@@ -17,11 +17,15 @@ footer h1 {
     color: white;
     margin: 0;
 }
+footer h1:hover {
+    color: #711b8c !important;
+    transition: 0.5s;
+}
 @media screen and (max-width: 768px){
     footer {
         width: 100%;
         border-radius: 0;
         border: none;
-        border-top: 1px dotted #1db954;
+        border-top: 1px solid #711b8c;
     }
 }

@@ -11,6 +11,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  background-color: #1d1045aa;
   
   min-height: 100vh;
 }

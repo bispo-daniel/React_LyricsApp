@@ -24,7 +24,7 @@ class Body extends Component {
             //Pegando a div do html que recerá os valores em outra div
             let insertInto = document.getElementById('insertInto')
 
-            //A div que receberá cada linha da letra da música sendo declarada 
+            //A div que receberá cada linha da letra da música sendo declarada:
             let queryDiv = document.createElement('div')
             //Seu ID único iterado
             queryDiv.setAttribute('id', `queryDiv${iterator}`)
@@ -32,9 +32,10 @@ class Body extends Component {
             //Inserindo na div do HTML
             insertInto.appendChild(queryDiv)
 
-            let p = document.createElement('p')
-            p.innerHTML = `Lyrics from Musixmatch S2...`
-            queryDiv.appendChild(p)
+            //O h1 para display do nome da música e artista
+            let h1 = document.createElement('h1');
+            h1.innerHTML = songAndArtist;
+            queryDiv.appendChild(h1);
 
                 fetch(url)
                     .then(data => data.json())
@@ -45,11 +46,11 @@ class Body extends Component {
                         //Este é o array de cada palavra na letra da música
                         let wordArr = Array(path.split("\n"))[0]
                         
-                        //Criar um H1 para cada index do array acima
+                        //Criar um paragrafo para cada index do array acima
                         for(let phrase in wordArr){
-                            let h1 = document.createElement('h1')
-                            h1.innerHTML = `${wordArr[phrase]}`
-                            queryDiv.appendChild(h1)
+                            let p = document.createElement('p')
+                            p.innerHTML = `${wordArr[phrase]}`
+                            queryDiv.appendChild(p)
                         }
                     })  
             
@@ -78,17 +79,19 @@ class Body extends Component {
             <main onKeyUp={(e) => enterDown(e)}>
                 <h1>Lyrics App</h1>
                 <p>Download 'Allow CORS' browser extension...</p>
+
                 <div className="input-group">
                     <div className="input-group-append">
                         <input type="text" id="songInput" className="form-control bg-transparent" placeholder="Song" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                        <input type="text" id="ArtistInput" className="form-control bg-transparent" placeholder="Artist" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <input type="text" id="artistInput" className="form-control bg-transparent" placeholder="Artist" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                     </div>
                     <button onClick={() => apiHandler()}className="btn btn-outline-success" type="button">Search</button>
                 </div>
 
                 <button onClick={() => clearResults()}className="btn btn-danger w-75 mb-5" type="button">Clear</button>
 
-                <div id="insertInto"></div>
+                <div id="insertInto">
+                </div>
             </main>
         )
     }
