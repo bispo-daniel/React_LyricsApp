@@ -1,6 +1,11 @@
 # Check this project online:
   https://bishop-lyricsapp.netlify.app
 
+# About this project...
+  React project developed to query lyrics from songs. The API used is from Musixmatch.
+  //Get your key here:    
+  https://developer.musixmatch.com/admin/applications
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
